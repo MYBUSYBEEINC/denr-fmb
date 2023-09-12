@@ -102,6 +102,49 @@
         background: #636363;
     }
 
+.table-container {
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/*    .dataTable td:not(:nth-last-child(-n+2)) {
+        min-width: 150px;
+    }
+*/
+.dataTables_wrapper {
+    color: #5c5c5c;
+}
+
+    .dataTables_wrapper .dataTables_length {
+        margin-bottom: 15px;
+    }
+
+.table > thead {
+    color: white;
+    background-color: #282d6d;
+}
+
+tbody, td, tfoot, th, thead, tr {
+    border-style: none;
+}
+
+table tbody tr {
+    color: #5c5c5c !important;
+    vertical-align: middle;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button .current {
+    background-color: #14984a;
+    color: white;
+    padding: 0px;
+    border: none;
+}
+
 footer {
     position: absolute;
     bottom: 0;

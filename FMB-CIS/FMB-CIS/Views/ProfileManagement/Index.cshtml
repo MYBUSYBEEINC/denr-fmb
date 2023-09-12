@@ -1,5 +1,4 @@
-﻿@page
-@{
+﻿@{
     Layout = "~/Views/Shared/_MainPageLayout.cshtml";
     ViewBag.Title = "Profile Management";
     ViewBag.Name = "Mugen Cabagnot";
@@ -7,18 +6,86 @@
 
 <div id="card-container">
     <div id="card">
-        <p>
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-        Why do we use it?
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-
-        What is Lorem Ipsum?
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-        Why do we use it?
-        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-        </p>
+        <div class="table-container">
+            <table id="profileManagementTable" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="text-nowrap">User Type</th>
+                        <th class="text-nowrap">Name</th>
+                        <th class="text-nowrap">Email</th>
+                        <th class="text-nowrap">Contact No.</th>
+                        <th class="text-nowrap">Address</th>
+                        <th class="text-nowrap">Municipality</th>
+                        <th class="text-nowrap text-center">Status</th>
+                        <th class="text-nowrap text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-nowrap">Chainsaw Importer</td>
+                        <td class="text-nowrap">Juan Dela Cruz</td>
+                        <td class="text-nowrap">juan@email.com</td>
+                        <td class="text-nowrap">0916 123 3456</td>
+                        <td>123 Mendiola St, Manila  City</td>
+                        <td class="text-nowrap">Manila</td>
+                        <td class="text-nowrap text-center d-flex justify-content-center">
+                            <div class="bg-secondary text-white px-3 pb-2 pt-1 rounded-pill w-105">
+                                Pending
+                            </div>
+                        </td>
+                        <td class="text-nowrap text-center">
+                            <a href="@Url.Action("ViewProfile", new { Id=1 })" class="bg-green text-white px-1 pb-1 rounded" title="view profile">
+                                <i data-feather="eye" class="data-feather-20"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">Chainsaw Seller</td>
+                        <td class="text-nowrap">Mariah Clara</td>
+                        <td class="text-nowrap">juan@email.com</td>
+                        <td class="text-nowrap">0916 123 3456</td>
+                        <td>123 Mendiola St, Manila  City</td>
+                        <td>Manila</td>
+                        <td class="text-nowrap text-center d-flex justify-content-center">
+                            <div class="bg-success text-white px-3 pb-2 pt-1 rounded-pill w-105">
+                                Approved
+                            </div>
+                        </td>
+                        <td class="text-nowrap text-center">
+                            <a href="@Url.Action("ViewProfile", new { Id=2 })" class="bg-green text-white px-1 pb-1 rounded" title="view profile">
+                                <i data-feather="eye" class="data-feather-20"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-nowrap">Chainsaw Owner</td>
+                        <td class="text-nowrap">Mariah Clara</td>
+                        <td class="text-nowrap">juan@email.com</td>
+                        <td class="text-nowrap">0916 123 3456</td>
+                        <td>123 Mendiola St, Manila  City</td>
+                        <td class="text-nowrap">Manila</td>
+                        <td class="text-nowrap text-center d-flex justify-content-center">
+                            <div class="bg-danger text-white px-3 pb-2 pt-1 rounded-pill w-105">
+                                Denied
+                            </div>
+                        </td>
+                        <td class="text-nowrap text-center">
+                            <a href="@Url.Action("ViewProfile", new { Id=3 })" class="bg-green text-white px-1 pb-1 rounded" title="view profile">
+                                <i data-feather="eye" class="data-feather-20"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
+
+<script src="/js/jquery-3.7.1.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        feather.replace();
+
+    });
+</script>
