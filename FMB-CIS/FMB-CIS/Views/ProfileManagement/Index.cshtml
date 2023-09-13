@@ -1,83 +1,166 @@
 ﻿@{
     Layout = "~/Views/Shared/_MainPageLayout.cshtml";
     ViewBag.Title = "Profile Management";
-    ViewBag.Name = "Mugen Cabagnot";
 }
 
 <div id="card-container">
     <div id="card">
-        <div class="table-container">
-            <table id="profileManagementTable" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th class="text-nowrap">User Type</th>
-                        <th class="text-nowrap">Name</th>
-                        <th class="text-nowrap">Email</th>
-                        <th class="text-nowrap">Contact No.</th>
-                        <th class="text-nowrap">Address</th>
-                        <th class="text-nowrap">Municipality</th>
-                        <th class="text-nowrap text-center">Status</th>
-                        <th class="text-nowrap text-center">Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="text-nowrap">Chainsaw Importer</td>
-                        <td class="text-nowrap">Juan Dela Cruz</td>
-                        <td class="text-nowrap">juan@email.com</td>
-                        <td class="text-nowrap">0916 123 3456</td>
-                        <td>123 Mendiola St, Manila  City</td>
-                        <td class="text-nowrap">Manila</td>
-                        <td class="text-nowrap text-center d-flex justify-content-center">
-                            <div class="bg-secondary text-white px-3 pb-2 pt-1 rounded-pill w-105">
-                                Pending
+        <hr />
+        <div class="row m-0">
+            <div class="col-md-3">
+                <div class="d-flex justify-content-center">
+                    <img src="/assets/images/default-avatar.png" class="rounded" />
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="row mb-5">
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        User Type
+                                    </label>
+                                    <span class="fw-bold">
+                                        Chainsaw Importer
+                                    </span>
+                                </div>
                             </div>
-                        </td>
-                        <td class="text-nowrap text-center">
-                            <a href="@Url.Action("ViewProfile", new { Id=1 })" class="bg-green text-white px-1 pb-1 rounded" title="view profile">
-                                <i data-feather="eye" class="data-feather-20"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-nowrap">Chainsaw Seller</td>
-                        <td class="text-nowrap">Mariah Clara</td>
-                        <td class="text-nowrap">juan@email.com</td>
-                        <td class="text-nowrap">0916 123 3456</td>
-                        <td>123 Mendiola St, Manila  City</td>
-                        <td>Manila</td>
-                        <td class="text-nowrap text-center d-flex justify-content-center">
-                            <div class="bg-success text-white px-3 pb-2 pt-1 rounded-pill w-105">
-                                Approved
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        Name
+                                    </label>
+                                    <span class="fw-bold">
+                                        Juan Dela Cruz
+                                    </span>
+                                </div>
                             </div>
-                        </td>
-                        <td class="text-nowrap text-center">
-                            <a href="@Url.Action("ViewProfile", new { Id=2 })" class="bg-green text-white px-1 pb-1 rounded" title="view profile">
-                                <i data-feather="eye" class="data-feather-20"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-nowrap">Chainsaw Owner</td>
-                        <td class="text-nowrap">Mariah Clara</td>
-                        <td class="text-nowrap">juan@email.com</td>
-                        <td class="text-nowrap">0916 123 3456</td>
-                        <td>123 Mendiola St, Manila  City</td>
-                        <td class="text-nowrap">Manila</td>
-                        <td class="text-nowrap text-center d-flex justify-content-center">
-                            <div class="bg-danger text-white px-3 pb-2 pt-1 rounded-pill w-105">
-                                Denied
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        Email Address
+                                    </label>
+                                    <span class="fw-bold">
+                                        juan@email.com
+                                    </span>
+                                </div>
                             </div>
-                        </td>
-                        <td class="text-nowrap text-center">
-                            <a href="@Url.Action("ViewProfile", new { Id=3 })" class="bg-green text-white px-1 pb-1 rounded" title="view profile">
-                                <i data-feather="eye" class="data-feather-20"></i>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        Contact Number
+                                    </label>
+                                    <span class="fw-bold">
+                                        0916 123 3456
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        Valid ID
+                                    </label>
+                                    <span class="fw-bold">
+                                        SSS
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        Valid ID Number
+                                    </label>
+                                    <span class="fw-bold">
+                                        001234567
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        Birth Date
+                                    </label>
+                                    <span class="fw-bold">
+                                        December 27, 1989
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        Street Address
+                                    </label>
+                                    <span class="fw-bold">
+                                        123 Mendiola St, Manila  City
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        Region
+                                    </label>
+                                    <span class="fw-bold">
+                                        NCR
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        Province
+                                    </label>
+                                    <span class="fw-bold">
+                                        Manila
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-5">
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        City/Municipality
+                                    </label>
+                                    <span class="fw-bold">
+                                        Manila
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-group d-flex flex-column gap-1">
+                                    <label class="text-secondary small">
+                                        Barangay
+                                    </label>
+                                    <span class="fw-bold">
+                                        Mendiola
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-md-12">
+                                <button class="btn text-secondary bg-gray border-0">Change Password</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-2 d-flex justify-content-end">
+                        <a href="#" class="text-decoration-none me-5"><i data-feather="settings" class="me-1"></i>Edit</a>
+                    </div>
+                </div>
+            </div>
         </div>
+        <hr />
     </div>
 </div>
 
@@ -85,7 +168,6 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        feather.replace();
 
     });
 </script>

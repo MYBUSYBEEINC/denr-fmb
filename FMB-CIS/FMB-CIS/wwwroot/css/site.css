@@ -38,6 +38,10 @@ body {
     background-color: #14984a;
 }
 
+.bg-gray {
+    background-color: #dcdcdc;
+}
+
 .hr {
     border: 2px solid #282d6d;
     opacity: 1;
@@ -74,6 +78,7 @@ body {
 
 a:hover {
     color: #14984a;
+    transition: all 0.15s ease-in-out;
 }
 
 a:focus-visible {

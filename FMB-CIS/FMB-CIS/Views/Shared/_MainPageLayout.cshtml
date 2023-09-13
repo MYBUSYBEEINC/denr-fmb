@@ -6,10 +6,8 @@
     <title>FMB-CIS @ViewData["Title"]</title>
     <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/site.css" asp-append-version="true" />
-    @*<link rel="stylesheet" href="/FMB_CIS.styles.css" asp-append-version="true" />*@
     <link rel="stylesheet" href="/css/main-page-layout.css" asp-append-version="true" />
     <link rel="stylesheet" href="/css/datatables.min.css" />
-    @*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.css" />*@
 </head>
 <body>
     <div id="header">
@@ -98,7 +96,7 @@
                                     <span>Profile Management</span>
                                 </a>
                             </li>
-                            <li>
+                            <li id="accountManagementMenuItem">
                                 <a href="@Url.Action("Index", "AccountManagement")" class="d-flex gap-2 text-decoration-none fs-6">
                                     <div>
                                         <img src="~/assets/images/menu-icons/account-management.png" />
@@ -180,13 +178,14 @@
         const pageToMenuItemMap = {
             "/Dashboard": "dashboardMenuItem",
             "/ProfileManagement": "profileManagementMenuItem",
+            "/AccountManagement": "accountManagementMenuItem"
             
         };
 
-        if (currentPage.startsWith("/ProfileManagement/ViewProfile/")) {
+        if (currentPage.startsWith("/AccountManagement/ViewAccount/")) {
             const urlParts = currentPage.split("/");
             const id = urlParts[urlParts.length - 1];
-            setActiveMenuItem(pageToMenuItemMap["/ProfileManagement"]);
+            setActiveMenuItem(pageToMenuItemMap["/AccountManagement"]);
         } else if (pageToMenuItemMap[currentPage]) {
             setActiveMenuItem(pageToMenuItemMap[currentPage]);
         }
