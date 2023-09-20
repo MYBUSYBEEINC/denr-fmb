@@ -1,6 +1,6 @@
 ﻿@{
     Layout = "~/Views/Shared/_MainPageLayout.cshtml";
-    ViewBag.Title = "Account Management";
+    ViewBag.Title = "Application for Chainsaw importer List";
 }
 
 <div id="card-container">
@@ -34,11 +34,8 @@
                         </td>
                         <td class="text-nowrap">
                             <div class="d-flex justify-content-center gap-3">
-                                <a href="#" class="bg-green text-white px-1 pb-1 rounded" title="edit">
-                                    <i data-feather="edit" class="data-feather-20"></i>
-                                </a>
-                                <a href="#" class="bg-green text-white px-1 pb-1 rounded" title="deactivate">
-                                    <i data-feather="trash-2" class="data-feather-20"></i>
+                                <a href="@Url.Action("ViewChainsawImporter", "ChainsawImporter")" class="bg-green text-white px-1 pb-1 rounded" title="view">
+                                    <i data-feather="eye" class="data-feather-20"></i>
                                 </a>
                             </div>
                         </td>
@@ -57,11 +54,8 @@
                         </td>
                         <td class="text-nowrap">
                             <div class="d-flex justify-content-center gap-3">
-                                <a href="#" class="bg-green text-white px-1 pb-1 rounded" title="edit">
-                                    <i data-feather="edit" class="data-feather-20"></i>
-                                </a>
-                                <a href="#" class="bg-green text-white px-1 pb-1 rounded" title="deativate">
-                                    <i data-feather="trash-2" class="data-feather-20"></i>
+                                <a href="#" class="bg-green text-white px-1 pb-1 rounded" title="view">
+                                    <i data-feather="eye" class="data-feather-20"></i>
                                 </a>
                             </div>
                         </td>
@@ -80,12 +74,9 @@
                         </td>
                         <td class="text-nowrap">
                             <div class="d-flex justify-content-center gap-3">
-                            <a href="#" class="bg-green text-white px-1 pb-1 rounded" title="edit">
-                                <i data-feather="edit" class="data-feather-20"></i>
-                            </a>
-                            <a href="#" class="bg-green text-white px-1 pb-1 rounded" title="deativate">
-                                <i data-feather="trash-2" class="data-feather-20"></i>
-                            </a>
+                                <a href="#" class="bg-green text-white px-1 pb-1 rounded" title="view">
+                                    <i data-feather="eye" class="data-feather-20"></i>
+                                </a>
                             </div>
                         </td>
                     </tr>
